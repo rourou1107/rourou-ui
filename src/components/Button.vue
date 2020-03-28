@@ -1,15 +1,15 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-        <svg class="icon" aria-hidden="true" v-if="name">
-            <use :xlink:href="`#i-${name}`"></use>
-        </svg>
+        <g-icon :name="name"></g-icon>
         <div class="content">
             <slot/>
         </div>
     </button>
 </template>
 <script>
+    import Icon from "./Icon";
     export default {
+        components: {Icon},
         props: {
             name: String,
             iconPosition: {
@@ -48,11 +48,6 @@
         }
 
         .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
             order: 1;
             margin-right: .1em;
         }
