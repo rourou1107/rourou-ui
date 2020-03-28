@@ -4,7 +4,6 @@
     <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585379986403</updated>
-      <workItem from="1585379987644" duration="9153000" />
+      <workItem from="1585379987644" duration="11973000" />
     </task>
     <task id="LOCAL-00001" summary="npm init">
       <created>1585382322911</created>
@@ -94,7 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585387699962</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="将按钮的内容编程插槽，方便用户自己控制，为按钮添加图标">
+      <created>1585401878835</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585401878835</updated>
+    </task>
+    <task id="LOCAL-00008" summary="不传name，不显示图标">
+      <created>1585401977547</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585401977547</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,12 +123,14 @@
     <MESSAGE value="安装 parcel" />
     <MESSAGE value="安装 parcel-bundler" />
     <MESSAGE value="改为.vue单文件组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="改为.vue单文件组件" />
+    <MESSAGE value="将按钮的内容编程插槽，方便用户自己控制，为按钮添加图标" />
+    <MESSAGE value="不传name，不显示图标" />
+    <option name="LAST_COMMIT_MESSAGE" value="不传name，不显示图标" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585401873765">
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585404842920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585401873765" />
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585404842920" />
   </component>
 </project>
