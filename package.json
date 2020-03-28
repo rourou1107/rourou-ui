@@ -21,5 +21,8 @@
   "homepage": "https://github.com/rourou1107/rourou-ui#readme",
   "dependencies": {
     "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
   }
 }
