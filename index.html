@@ -32,6 +32,17 @@
     <g-button :loading="loading3" @click="loading3 = !loading3">
         按钮
     </g-button >
+    <g-group-button :loading="loading3" @click="loading3 = !loading3">
+        <g-button name="left">
+            上一页
+        </g-button>
+        <g-button>
+            更多
+        </g-button >
+        <g-button name="right" icon-position="right">
+            下一页
+        </g-button >
+    </g-group-button >
 </div>
 </body>
 <script src="./src/app.js"></script>
