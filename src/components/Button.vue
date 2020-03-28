@@ -1,6 +1,6 @@
 <template>
     <button class="g-button">
-        <svg class="icon" aria-hidden="true">
+        <svg class="icon" aria-hidden="true" v-if="name">
             <use :xlink:href="`#i-${name}`"></use>
         </svg>
         <slot/>
