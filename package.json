@@ -20,9 +20,15 @@
   },
   "homepage": "https://github.com/rourou1107/rourou-ui#readme",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "@vue/component-compiler-utils": "^3.1.1",
+    "sass": "^1.26.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "alias": {
+    "vue" : "./node_modules/vue/dist/vue.common.js"
   }
 }
