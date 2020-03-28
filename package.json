@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rourou1107/rourou-ui/issues"
   },
-  "homepage": "https://github.com/rourou1107/rourou-ui#readme"
+  "homepage": "https://github.com/rourou1107/rourou-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
