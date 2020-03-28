@@ -23,17 +23,17 @@
 </head>
 <body>
 <div id="app">
-    <g-button name="thumbs-up" icon-position="left">
+    <g-button name="thumbs-up" icon-position="left" :loading="loading1" @click="loading1 = !loading1">
         按钮
     </g-button>
-    <g-button name="setting" icon-position="right">
+    <g-button name="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
         按钮
     </g-button >
-    <g-button name="setting">
+    <g-button :loading="loading3" @click="loading3 = !loading3">
         按钮
-    </g-button>
+    </g-button >
 </div>
 </body>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1720953_ioidaez9m0e.js"></script>
+<script src="//at.alicdn.com/t/font_1720953_3xxewpap42p.js"></script>
 </html>
