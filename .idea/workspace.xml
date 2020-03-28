@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/button.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585379986403</updated>
-      <workItem from="1585379987644" duration="6491000" />
+      <workItem from="1585379987644" duration="9153000" />
     </task>
     <task id="LOCAL-00001" summary="npm init">
       <created>1585382322911</created>
@@ -84,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585385365027</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="安装 parcel-bundler">
+      <created>1585387502796</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585387502796</updated>
+    </task>
+    <task id="LOCAL-00006" summary="改为.vue单文件组件">
+      <created>1585387699962</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585387699962</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,12 +108,14 @@
     <MESSAGE value="安装 vue 依赖" />
     <MESSAGE value="按钮初始样式完成" />
     <MESSAGE value="安装 parcel" />
-    <option name="LAST_COMMIT_MESSAGE" value="安装 parcel" />
+    <MESSAGE value="安装 parcel-bundler" />
+    <MESSAGE value="改为.vue单文件组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="改为.vue单文件组件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585387496231">
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585401863402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585387496231" />
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585401863402" />
   </component>
 </project>
