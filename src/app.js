@@ -93,3 +93,22 @@ let {expect} = chai;
     vm.$el.remove();
     vm.$destroy();
 }
+
+{
+    const Constructor = Vue.extend(Button);
+    const vm = new Constructor({
+        propsData: {
+            name: 'setting',
+        }
+    });
+
+    vm.$mount();
+    // spy 是一个间谍函数
+    let spy = chai.spy(function () {
+    });
+    // 只要click触发了，这个 spy 就会被执行
+    vm.$on('click', spy);
+    vm.$el.click();
+    vm.$el.remove();
+    vm.$destroy();
+}
