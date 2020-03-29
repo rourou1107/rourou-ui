@@ -3,6 +3,9 @@ import Button from './components/Button';
 import Icon from "./components/Icon";
 import GroupButton from "./components/GroupButton";
 import chai from 'chai';
+import spies from 'chai-spies';
+
+chai.use(spies);
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -19,7 +22,6 @@ new Vue({
 });
 
 let {expect} = chai;
-
 // 单元测试
 {
     const Constructor = Vue.extend(Button);
@@ -74,18 +76,20 @@ let {expect} = chai;
     vm.$destroy();
 }
 
+
 {
     const Constructor = Vue.extend(Button);
     const vm = new Constructor({
         propsData: {
             name: 'setting',
-            iconPosition: 'right'
+            loading: true
         }
     });
-    let div = document.createElement('div');
-    document.body.appendChild(div);
-    vm.$mount(div);
-    let svg = vm.$el.querySelector('svg');
-    let {order} = window.getComputedStyle(svg);
-    expect(order).to.eq('2');
+
+    vm.$mount();
+    let use = vm.$el.querySelector('use');
+    let href = use.getAttribute('xlink:href');
+    expect(href).to.eq('#i-loading');
+    vm.$el.remove();
+    vm.$destroy();
 }
