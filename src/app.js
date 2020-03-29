@@ -21,6 +21,7 @@ new Vue({
     }
 });
 
+
 let {expect} = chai;
 // 单元测试
 {
