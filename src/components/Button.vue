@@ -8,9 +8,7 @@
     </button>
 </template>
 <script>
-    import Icon from "./Icon";
     export default {
-        components: {Icon},
         props: {
             name: String,
             iconPosition: {

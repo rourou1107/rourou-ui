@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Icon.vue" afterDir="false" />
+    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="添加点击触发 loading icon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
     </list>
@@ -33,6 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -50,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585379986403</updated>
-      <workItem from="1585379987644" duration="12858000" />
+      <workItem from="1585379987644" duration="21182000" />
     </task>
     <task id="LOCAL-00001" summary="npm init">
       <created>1585382322911</created>
@@ -122,7 +124,35 @@
       <option name="project" value="LOCAL" />
       <updated>1585404950709</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="抽出 icon，变成全局组件 g-icon">
+      <created>1585405771354</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585405771354</updated>
+    </task>
+    <task id="LOCAL-00012" summary="添加点击触发 loading icon">
+      <created>1585408975178</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585408975178</updated>
+    </task>
+    <task id="LOCAL-00013" summary="一组按钮完成">
+      <created>1585409523072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585409523072</updated>
+    </task>
+    <task id="LOCAL-00014" summary="如果 g-group-button 子元素不是 g-button，给出警告">
+      <created>1585409888527</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585409888527</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,12 +171,24 @@
     <MESSAGE value="将按钮的内容编程插槽，方便用户自己控制，为按钮添加图标" />
     <MESSAGE value="不传name，不显示图标" />
     <MESSAGE value="icon和文字方向可控制" />
-    <option name="LAST_COMMIT_MESSAGE" value="icon和文字方向可控制" />
+    <MESSAGE value="抽出 icon，变成全局组件 g-icon" />
+    <MESSAGE value="添加点击触发 loading icon" />
+    <MESSAGE value="一组按钮完成" />
+    <MESSAGE value="如果 g-group-button 子元素不是 g-button，给出警告" />
+    <option name="LAST_COMMIT_MESSAGE" value="如果 g-group-button 子元素不是 g-button，给出警告" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585405744162">
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585472111365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585405744162" />
+    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585472111365" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1585408041660">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585408041660" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585407919663">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585407919663" />
   </component>
 </project>
