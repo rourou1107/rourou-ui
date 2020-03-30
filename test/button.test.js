@@ -5,9 +5,17 @@ import Button from '../src/components/Button';
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 
+// BDD 行为驱动测试
+// 举例子
+// describe '人类'
+//      it has a bead // 描述行为的
+//      it has two eyes
+//      it can run
+//      it can die
 describe('Button', () => {
+    // it 作用是隔绝作用域
     it('存在.', () => {
-        expect(Button).to.be.ok;
+        expect(Button).to.be.ok; // Button 是存在的
     });
     it('可以设置icon.', () => {
         const Constructor = Vue.extend(Button);
@@ -70,10 +78,10 @@ describe('Button', () => {
             }
         }).$mount();
 
-        const callback = sinon.fake();
+        const callback = sinon.fake(); // Sinon 是一个 spy / stub / mock 库，用以辅助测试
         vm.$on('click', callback);
         vm.$el.click();
-        expect(callback).to.have.been.called;
+        expect(callback).to.have.been.called; // 期待 callback 被调用
 
     });
 });
