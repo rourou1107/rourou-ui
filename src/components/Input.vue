@@ -1,21 +1,27 @@
 <template>
     <div class="wrapper">
-        <input class="" :value="value" :disabled="disabled" :readonly="readonly"
+        <input :value="value" :disabled="disabled" :readonly="readonly"
+               type="text"
                :class="{error: error}"
                @change="$emit('change')"
                @input="$emit('input')"
                @focus="$emit('focus')"
                @blur="$emit('blur')"
-        />
+        >
         <template v-if="error">
-            <g-icon name="error" class="input-icon"></g-icon>
-            <span class="input-message">{{error}}</span>
+            <icon name="error" class="input-icon"></icon>
+            <span class="error-message">{{error}}</span>
         </template>
     </div>
 </template>
 <script>
+    import Icon from "./Icon"
+
     export default {
         name: 'GInput',
+        components: {
+            Icon
+        },
         props: {
             value: {
                 type: String
@@ -69,21 +75,26 @@
                 color: #666;
                 cursor: not-allowed;
             }
+
             &.error {
                 border-color: $red;
+
                 &:focus {
                     outline: none;
                     box-shadow: inset 0 0 1px 1px $red;
                 }
             }
         }
+
         > .input-icon {
             fill: $red;
         }
-        > .input-message {
+
+        > .error-message {
             color: $red;
         }
-        & >:not(last-child) {
+
+        & > :not(last-child) {
             margin-right: .2em;
         }
     }

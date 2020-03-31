@@ -82,6 +82,5 @@ describe('Button', () => {
         vm.$on('click', callback);
         vm.$el.click();
         expect(callback).to.have.been.called; // 期待 callback 被调用
-
     });
 });

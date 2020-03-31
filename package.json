@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "start": "parcel index.html --no-cache"
   },
   "repository": {
@@ -13,7 +13,8 @@
     "url": "git+https://github.com/rourou1107/rourou-ui.git"
   },
   "keywords": [
-    "vue，ui"
+    "vue",
+    "ui"
   ],
   "author": "rourou",
   "license": "ISC",
