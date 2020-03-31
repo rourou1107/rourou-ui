@@ -72,6 +72,7 @@ describe('Input', () => {
                     // 自动触发 input 的事件
                     let event = new Event(eventName);
                     inputElement.dispatchEvent(event)
+                    expect(callback).to.have.been.calledWith(event)
                 })
         })
     })
