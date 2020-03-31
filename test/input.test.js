@@ -71,8 +71,11 @@ describe('Input', () => {
                     const inputElement = vm.$el.querySelector('input')
                     // 自动触发 input 的事件
                     let event = new Event(eventName);
+                    Object.defineProperty(event, 'target',{
+                        value: {value: 'hi'}, enumerable: true
+                    })
                     inputElement.dispatchEvent(event)
-                    expect(callback).to.have.been.calledWith(event)
+                    expect(callback).to.have.been.calledWith('hi') // 参数就是 callback 接收的参数
                 })
         })
     })

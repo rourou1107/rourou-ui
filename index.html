@@ -35,10 +35,11 @@
 <body>
 <div id="app">
     <div class="block">
-        <g-input value="normal"></g-input>
-        <g-input value="disabled" disabled></g-input>
-        <g-input value="readonly" readonly></g-input>
-        <g-input value="error" error="格式错误"></g-input>
+        <g-input v-model="message1"></g-input>
+        {{message1}}
+        <g-input v-model="message2" disabled></g-input>
+        <g-input v-model="message3" readonly></g-input>
+        <g-input v-model="message4" error="格式错误"></g-input>
     </div>
     <div class="block">
         <g-button name="thumbs-up" icon-position="left" :loading="loading1" @click.native="loading1 = !loading1">

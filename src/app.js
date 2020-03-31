@@ -15,7 +15,11 @@ new Vue({
         return {
             loading1: false,
             loading2: false,
-            loading3: false
+            loading3: false,
+            message1: 'message1',
+            message2: 'message2',
+            message3: 'message3',
+            message4: 'message4'
         };
     }
 });
