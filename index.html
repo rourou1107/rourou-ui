@@ -26,30 +26,49 @@
             font-size: var(--font-size);
         }
     </style>
+    <style>
+        .block {
+            margin: 30px;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <g-button name="thumbs-up" icon-position="left" :loading="loading1" @click.native="loading1 = !loading1">
-        按钮
-    </g-button>
-    <g-button name="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-        按钮
-    </g-button>
-    <g-button :loading="loading3" @click="loading3 = !loading3">
-        按钮
-    </g-button>
-    <g-group-button :loading="loading3" @click="loading3 = !loading3">
-        <g-button name="left">
-            上一页
+    <div class="block">
+        <g-input value="normal"></g-input>
+<!--        <g-input value="normal" @input="handleInput"></g-input>-->
+<!--        <g-input value="normal" @focus="handleFocus"></g-input>-->
+<!--        <g-input value="normal" @blur="handleBlur"></g-input>-->
+        <g-input value="disabled" disabled></g-input>
+        <g-input value="readonly" readonly></g-input>
+        <g-input value="error" error="格式错误"></g-input>
+    </div>
+    <div class="block">
+        <g-button name="thumbs-up" icon-position="left" :loading="loading1" @click.native="loading1 = !loading1">
+            按钮
         </g-button>
+        <g-button name="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
+            按钮
+        </g-button>
+        <g-button :loading="loading3" @click="loading3 = !loading3">
+            按钮
+        </g-button>
+    </div>
+    <div class="block">
+        <g-group-button :loading="loading3" @click="loading3 = !loading3">
+            <g-button name="left">
+                上一页
+            </g-button>
 
-        <g-button>
-            更多
-        </g-button>
-        <g-button name="right" icon-position="right">
-            下一页
-        </g-button>
-    </g-group-button>
+            <g-button>
+                更多
+            </g-button>
+            <g-button name="right" icon-position="right">
+                下一页
+            </g-button>
+        </g-group-button>
+    </div>
+
 </div>
 </body>
 <script src="./src/app.js"></script>

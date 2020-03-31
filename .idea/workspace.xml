@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="click 的测试用例">
-      <change afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/button.test.js" afterDir="false" />
+    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="删除初始的单元测试，给组件添加 name 属性">
+      <change afterPath="$PROJECT_DIR$/src/components/Input.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Mystudy\web\github-demo\rourou-ui\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -55,7 +53,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585379986403</updated>
-      <workItem from="1585379987644" duration="26689000" />
+      <workItem from="1585379987644" duration="27027000" />
+      <workItem from="1585539196987" duration="9755000" />
+      <workItem from="1585617624947" duration="6485000" />
     </task>
     <task id="LOCAL-00001" summary="npm init">
       <created>1585382322911</created>
@@ -183,7 +183,70 @@
       <option name="project" value="LOCAL" />
       <updated>1585472913292</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="添加各种测试用例相关的包，添加测试用例代码、karma的配置文件以及修改package.json">
+      <created>1585493803210</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1585493803210</updated>
+    </task>
+    <task id="LOCAL-00020" summary="使用 npm test 和 npm dev-test 来自动化测试">
+      <created>1585549189667</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1585549189667</updated>
+    </task>
+    <task id="LOCAL-00021" summary="创建 .travis.yms 来接入 travis">
+      <created>1585549651348</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1585549651348</updated>
+    </task>
+    <task id="LOCAL-00022" summary="更新 node 版本号">
+      <created>1585549701161</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1585549701161</updated>
+    </task>
+    <task id="LOCAL-00023" summary="项目中添加 parcel">
+      <created>1585550331080</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1585550331080</updated>
+    </task>
+    <task id="LOCAL-00024" summary="发布到 npm">
+      <created>1585553634963</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1585553634963</updated>
+    </task>
+    <task id="LOCAL-00025" summary="更新 README.md">
+      <created>1585575960790</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1585575960790</updated>
+    </task>
+    <task id="LOCAL-00026" summary="消除对 iconfont 的依赖">
+      <created>1585576083791</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1585576083791</updated>
+    </task>
+    <task id="LOCAL-00027" summary="删除初始的单元测试，给组件添加 name 属性">
+      <created>1585618112997</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585618112997</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +256,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="npm init" />
     <MESSAGE value="安装 vue 依赖" />
     <MESSAGE value="按钮初始样式完成" />
     <MESSAGE value="安装 parcel" />
@@ -210,17 +272,26 @@
     <MESSAGE value="添加 chai-spies" />
     <MESSAGE value="添加 chai-spies 以及 第四个测试用例" />
     <MESSAGE value="click 的测试用例" />
-    <option name="LAST_COMMIT_MESSAGE" value="click 的测试用例" />
+    <MESSAGE value="添加各种测试用例相关的包，添加测试用例代码、karma的配置文件以及修改package.json" />
+    <MESSAGE value="使用 npm test 和 npm dev-test 来自动化测试" />
+    <MESSAGE value="创建 .travis.yms 来接入 travis" />
+    <MESSAGE value="更新 node 版本号" />
+    <MESSAGE value="项目中添加 parcel" />
+    <MESSAGE value="发布到 npm" />
+    <MESSAGE value="更新 README.md" />
+    <MESSAGE value="消除对 iconfont 的依赖" />
+    <MESSAGE value="删除初始的单元测试，给组件添加 name 属性" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除初始的单元测试，给组件添加 name 属性" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585493748160">
+    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585625129715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="112" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585493748160" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1585408041660">
+    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585625129715" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1585617813303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585408041660" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585617813303" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585407919663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
