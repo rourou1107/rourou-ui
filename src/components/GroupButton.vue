@@ -5,6 +5,7 @@
 </template>
 <script>
     export default {
+        name: 'GroupButton',
         mounted() {
             let children = this.$el.children;
             for (let child of children) {

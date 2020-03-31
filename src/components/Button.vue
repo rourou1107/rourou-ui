@@ -2,14 +2,15 @@
     <button class="g-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
         <g-icon :name="name"  v-if="name&&!loading"></g-icon>
         <g-icon name="loading" class="loading" v-if="loading"></g-icon>
-        <div class="content">
+        <span class="content">
             <slot/>
-        </div>
+        </span>
     </button>
 </template>
 <script>
     import Icon from "./Icon";
     export default {
+        name: 'GButton',
         components: {
             'g-icon': Icon
         },
@@ -45,22 +46,13 @@
         align-items: center;
         vertical-align: middle;
         font-size: var(--font-size);
-        &:active {
-            background-color: var(--button-active-bg);
-        }
+        &:active {background-color: var(--button-active-bg);}
 
-        &:hover {
-            border: 1px solid var(--border-color-hover);
-        }
+        &:hover {border: 1px solid var(--border-color-hover);}
 
-        &:focus {
-            outline: none;
-        }
+        &:focus {outline: none;}
 
-        .icon {
-            order: 1;
-            margin-right: .1em;
-        }
+        .icon {order: 1;margin-right: .1em;}
 
         .content {
             height: auto;
