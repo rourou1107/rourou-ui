@@ -11,6 +11,6 @@
 <style lang="scss" scoped>
     .row{
         display: flex;
-        background-color: grey;
+        border: 1px solid red;
     }
 </style>
