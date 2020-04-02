@@ -1,5 +1,5 @@
 <template>
-    <div class="row" :style="rowStyle">
+    <div class="row" :style="rowStyle" :class="rowClass">
         <slot></slot>
     </div>
 </template>
@@ -9,28 +9,45 @@
         props: {
             gutter: {
                 type: [Number, String]
+            },
+            align: {
+                type: String,
+                validator(value) {
+                    return ['left', 'right', 'center'].includes(value);
+                }
             }
         },
-        // 先创建爸爸，再创建儿子。儿子挂到爸爸上，爸爸再挂载
-        // 所以爸爸挂载后，儿子一定也挂载了
         mounted() {
             this.$children.forEach((vm) => {
-                vm.$data.gutter = this.gutter
-            })
+                vm.$data.gutter = this.gutter;
+            });
         },
         computed: {
             rowStyle() {
-                let {gutter} = this
+                let {gutter} = this;
                 return {
                     marginLeft: -gutter / 2 + 'px',
                     marginRight: -gutter / 2 + 'px'
-                }
+                };
+            },
+            rowClass() {
+                let {align} = this
+                return [align && `align-${align}`]
             }
         }
-    }
+    };
 </script>
 <style lang="scss" scoped>
     .row {
         display: flex;
+        &.align-center {
+            justify-content: center;
+        }
+        &.align-left {
+            justify-content: left;
+        }
+        &.align-right {
+            justify-content: right;
+        }
     }
 </style>
