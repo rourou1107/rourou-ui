@@ -51,14 +51,13 @@
         },
         computed: {
             colClass() {
-                let {span, offset, phone, ipad, narrowPc, pc, widePc, getColClasses} = this
+                let {span, offset, ipad, narrowPc, pc, widePc, getColClasses} = this
                 return [
                     ...getColClasses({span, offset}),
-                    ...getColClasses(phone, 'phone'),
-                    ...getColClasses(ipad, 'ipad'),
-                    ...getColClasses(narrowPc, 'narrow-pc'),
-                    ...getColClasses(pc, 'pc'),
-                    ...getColClasses(widePc, 'wide-pc'),
+                    ...getColClasses(ipad, 'ipad-'),
+                    ...getColClasses(narrowPc, 'narrow-pc-'),
+                    ...getColClasses(pc, 'pc-'),
+                    ...getColClasses(widePc, 'wide-pc-'),
                 ]
             },
             colStyle() {
@@ -70,13 +69,13 @@
             }
         },
         methods: {
-            getColClasses(obj={}, str){
+            getColClasses(obj={}, str=''){
                 let arr = []
                 if(obj.span){
-                    arr.push(`col-${str}-${obj.span}`)
+                    arr.push(`col-${str}${obj.span}`)
                 }
                 if(obj.offset){
-                    arr.push(`offset-${str}-${obj.offset}`)
+                    arr.push(`offset-${str}${obj.offset}`)
                 }
                 return arr
             }
@@ -100,12 +99,6 @@
             }
         }
         @media (max-width: 576px) {
-            $class-prefix: col-phone-;
-            @for $n from 1 through 24 {
-                &.#{$class-prefix}#{$n} {
-                    width: ($n/24)*100%
-                }
-            }
             $class-prefix: offset-phone-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
@@ -113,7 +106,7 @@
                 }
             }
         }
-        @media (min-width: 577px) and (max-width: 768px) {
+        @media (min-width: 577px) {
             $class-prefix: col-ipad-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
@@ -127,7 +120,7 @@
                 }
             }
         }
-        @media (min-width: 769px) and (max-width: 992px) {
+        @media (min-width: 769px) {
             $class-prefix: col-narrow-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
@@ -141,7 +134,7 @@
                 }
             }
         }
-        @media (min-width: 993px) and (max-width: 1200px) {
+        @media (min-width: 993px) {
             $class-prefix: col-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
