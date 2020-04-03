@@ -51,15 +51,14 @@
         },
         computed: {
             colClass() {
-                let {span, offset, phone, ipad, narrowPc, pc, widePc} = this
+                let {span, offset, phone, ipad, narrowPc, pc, widePc, getColClasses} = this
                 return [
-                    span && `col-${span}`,
-                    offset && `offset-${offset}`,
-                    ...(phone ? [phone.span && `col-phone-${phone.span}`, phone.offset && `offset-phone-${phone.offset}`] : []),
-                    ...(ipad ? [ipad.span && `col-${ipad.span}`, ipad.offset && `offset-ipad-${ipad.offset}`] : []),
-                    ...(narrowPc ? [narrowPc.span && `col-narrow-pc-${narrowPc.span}`, narrowPc.offset && `offset-narrow-pc-${narrowPc.offset}`] : []),
-                    ...(pc ? [pc.span && `col-pc-${pc.span}`, pc.offset && `col-pc-${pc.offset}`] : []),
-                    ...(widePc ? [widePc.span && `col-wide-pc-${widePc.span}`, widePc.offset && `offset-wide-pc-${widePc.offset}`] : [])
+                    ...getColClasses({span, offset}),
+                    ...getColClasses(phone, 'phone'),
+                    ...getColClasses(ipad, 'ipad'),
+                    ...getColClasses(narrowPc, 'narrow-pc'),
+                    ...getColClasses(pc, 'pc'),
+                    ...getColClasses(widePc, 'wide-pc'),
                 ]
             },
             colStyle() {
@@ -68,6 +67,18 @@
                     paddingLeft: gutter / 2 + 'px',
                     paddingRight: gutter / 2 + 'px'
                 }
+            }
+        },
+        methods: {
+            getColClasses(obj={}, str){
+                let arr = []
+                if(obj.span){
+                    arr.push(`col-${str}-${obj.span}`)
+                }
+                if(obj.offset){
+                    arr.push(`offset-${str}-${obj.offset}`)
+                }
+                return arr
             }
         }
     }

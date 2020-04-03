@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/input.test.js" afterDir="false" />
+    <list default="true" id="bde83a4b-f78f-473f-a99f-f557784172eb" name="Default Changelist" comment="让 g-input 支持 v-model，更新测试用例">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/button.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/button.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Col.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +34,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Mystudy\web\github-demo\rourou-ui\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -58,7 +54,12 @@
       <updated>1585379986403</updated>
       <workItem from="1585379987644" duration="27027000" />
       <workItem from="1585539196987" duration="9755000" />
-      <workItem from="1585617624947" duration="18462000" />
+      <workItem from="1585617624947" duration="19516000" />
+      <workItem from="1585659424212" duration="2936000" />
+      <workItem from="1585710981717" duration="12492000" />
+      <workItem from="1585754298059" duration="57000" />
+      <workItem from="1585821847780" duration="5270000" />
+      <workItem from="1585876801627" duration="8623000" />
     </task>
     <task id="LOCAL-00001" summary="npm init">
       <created>1585382322911</created>
@@ -256,7 +257,70 @@
       <option name="project" value="LOCAL" />
       <updated>1585625141996</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="添加测试用例">
+      <created>1585644116600</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1585644116600</updated>
+    </task>
+    <task id="LOCAL-00030" summary="事件测试用例修改">
+      <created>1585661755559</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1585661755559</updated>
+    </task>
+    <task id="LOCAL-00031" summary="让 g-input 支持 v-model，更新测试用例">
+      <created>1585662572320</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1585662572320</updated>
+    </task>
+    <task id="LOCAL-00032" summary="gird 支持 span（跨度自定义）">
+      <created>1585713776393</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1585713776393</updated>
+    </task>
+    <task id="LOCAL-00033" summary="gird 布局支持 offset 偏移">
+      <created>1585720937071</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1585720937071</updated>
+    </task>
+    <task id="LOCAL-00034" summary="grid 支持 gutter，即每块间有同样的空隙">
+      <created>1585749367178</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1585749367178</updated>
+    </task>
+    <task id="LOCAL-00035" summary="重构 row 和 col">
+      <created>1585750472917</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585750472917</updated>
+    </task>
+    <task id="LOCAL-00036" summary="增加 align，用来控制块位于左中右哪个区域">
+      <created>1585834546662</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1585834546662</updated>
+    </task>
+    <task id="LOCAL-00037" summary="初步实现响应式">
+      <created>1585883336282</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1585883336282</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,15 +330,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="按钮初始样式完成" />
-    <MESSAGE value="安装 parcel" />
-    <MESSAGE value="安装 parcel-bundler" />
-    <MESSAGE value="改为.vue单文件组件" />
-    <MESSAGE value="将按钮的内容编程插槽，方便用户自己控制，为按钮添加图标" />
-    <MESSAGE value="不传name，不显示图标" />
-    <MESSAGE value="icon和文字方向可控制" />
-    <MESSAGE value="抽出 icon，变成全局组件 g-icon" />
-    <MESSAGE value="添加点击触发 loading icon" />
     <MESSAGE value="一组按钮完成" />
     <MESSAGE value="如果 g-group-button 子元素不是 g-button，给出警告" />
     <MESSAGE value="四个测试用例" />
@@ -291,17 +346,34 @@
     <MESSAGE value="消除对 iconfont 的依赖" />
     <MESSAGE value="删除初始的单元测试，给组件添加 name 属性" />
     <MESSAGE value="Input 组件样式完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input 组件样式完成" />
+    <MESSAGE value="添加测试用例" />
+    <MESSAGE value="事件测试用例修改" />
+    <MESSAGE value="让 g-input 支持 v-model，更新测试用例" />
+    <MESSAGE value="gird 支持 span（跨度自定义）" />
+    <MESSAGE value="gird 布局支持 offset 偏移" />
+    <MESSAGE value="grid 支持 gutter，即每块间有同样的空隙" />
+    <MESSAGE value="重构 row 和 col" />
+    <MESSAGE value="增加 align，用来控制块位于左中右哪个区域" />
+    <MESSAGE value="初步实现响应式" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步实现响应式" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585644104895">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585712027402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585644104895" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1585617813303">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585712027402" />
+    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2" timestamp="1585883320556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585617813303" />
+    <state x="757" y="146" width="978" height="815" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585883320556" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1585878815944">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585878815944" />
+    <state x="636" y="253" width="647" height="534" key="find.popup" timestamp="1585884951589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="253" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585884951589" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585407919663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
