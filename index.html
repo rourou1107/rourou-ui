@@ -20,109 +20,28 @@
             --border-color-hover: #666;
         }
         body {
-            margin: 20px;
             font-size: var(--font-size);
         }
     </style>
     <style>
-        .block {
-            margin: 30px;
+        .demo {
+            min-height: 100px;
+            border: 1px solid red;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <div class="block">
-        <g-row>
-            <g-col span="24" :pc="{span: 6}">响应式布局</g-col>
-            <g-col span="24" :pc="{span: 8}">响应式布局</g-col>
-            <g-col span="24" :pc="{span: 10}">响应式布局</g-col>
-        </g-row>
-    </div>
-
-    <div class="block">
-        <hr/>
-        <g-row align="center">
-            <g-col>2</g-col>
-            <g-col>22</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">2</g-col>
-            <g-col span="22">22</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="4">4</g-col>
-            <g-col span="8">8</g-col>
-            <g-col span="12">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-            <g-col>3</g-col>
-            <g-col>4</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="6">6</g-col>
-            <g-col span="8">8</g-col>
-            <g-col span="2">2</g-col>
-            <g-col span="4">4</g-col>
-            <g-col span="4">4</g-col>
-        </g-row>
-    </div>
-    <div class="block">
-        <g-row>
-            <g-col span="2">2</g-col>
-            <g-col span="4">22</g-col>
-            <g-col span="16" offset="2">22</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">2</g-col>
-            <g-col span="8" offset="2">22</g-col>
-            <g-col span="8" offset="4">22</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">2</g-col>
-            <g-col span="22">22</g-col>
-        </g-row>
-    </div>
-    <div class="block">
-        <g-row gutter="20">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-    </div>
-    <div class="block">
-        <g-input v-model="message1"></g-input>
-        <g-input v-model="message2" disabled></g-input>
-        <g-input v-model="message3" readonly></g-input>
-        <g-input v-model="message4" error="格式错误"></g-input>
-    </div>
-    <div class="block">
-        <g-button name="thumbs-up" icon-position="left" :loading="loading1" @click.native="loading1 = !loading1">
-            按钮
-        </g-button>
-        <g-button name="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-            按钮
-        </g-button>
-        <g-button :loading="loading3" @click="loading3 = !loading3">
-            按钮
-        </g-button>
-    </div>
-    <div class="block">
-        <g-group-button :loading="loading3" @click="loading3 = !loading3">
-            <g-button name="left">
-                上一页
-            </g-button>
-
-            <g-button>
-                更多
-            </g-button>
-            <g-button name="right" icon-position="right">
-                下一页
-            </g-button>
-        </g-group-button>
-    </div>
-
+    <g-layout>
+        <g-sider class="demo">sider</g-sider>
+        <g-layout style="height: 100vh;">
+            <g-header class="demo">header</g-header>
+            <g-layout>
+                <g-content class="demo">content</g-content>
+            </g-layout>
+            <g-footer class="demo">footer</g-footer>
+        </g-layout>
+    </g-layout>
 </div>
 </body>
 <script src="./src/app.js"></script>
