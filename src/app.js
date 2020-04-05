@@ -5,11 +5,11 @@ import GroupButton from "./components/GroupButton";
 import Input from "./components/Input"
 import Row from "./components/Row";
 import Col from "./components/Col";
-import Layout from "./components/Layout"
-import Header from "./components/Header"
-import Content from "./components/Content"
-import Footer from "./components/Footer"
-import Sider from "./components/Sider"
+import Layout from "./components/layout/Layout"
+import Header from "./components/layout/Header"
+import Content from "./components/layout/Content"
+import Footer from "./components/layout/Footer"
+import Sider from "./components/layout/Sider"
 import plugin from "./plugin/plugin"
 
 Vue.use(plugin)
@@ -25,49 +25,16 @@ Vue.component('g-header', Header)
 Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-head', TabsHead)
+Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-pane', TabsPane)
 
 new Vue({
     el: '#app',
     data() {
         return {
-            loading1: false,
-            loading2: false,
-            loading3: false,
-            message1: 'message1',
-            message2: 'message2',
-            message3: 'message3',
-            message4: 'message4'
-        };
-    },
-    methods: {
-        test1() {
-            this.$toast(`我是toast我是toast1`,{
-                autoClose: false,
-                closeButton: {
-                    text: '知道了',
-                    callback(context) {}
-                },
-            })
-        },
-        test2() {
-            this.$toast(`我是toast我是toast2`,{
-                autoClose: false,
-                closeButton: {
-                    text: '知道了',
-                    callback(context) {}
-                },
-                position: 'bottom'
-            })
-        },
-        test3() {
-            this.$toast(`我是toast我是toast3`,{
-                autoClose: false,
-                closeButton: {
-                    text: '知道了',
-                    callback(context) {}
-                },
-                position: 'middle'
-            })
         }
     }
 });
