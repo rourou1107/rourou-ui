@@ -37,20 +37,23 @@
                 default: false
             }
         },
-        created() {
-            if(this.autoClose){
-                window.setTimeout(()=>{
-                    this.close()
-                }, this.autoCloseDelay * 1000)
-            }
-        },
         mounted() {
-            this.$nextTick(()=>{
-                this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`
-            })
-
+            this.execAutoClose()
+            this.updateStyle()
         },
         methods: {
+            updateStyle(){
+                this.$nextTick(()=>{
+                    this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`
+                })
+            },
+            execAutoClose(){
+                if(this.autoClose){
+                    window.setTimeout(()=>{
+                        this.close()
+                    }, this.autoCloseDelay * 1000)
+                }
+            },
             close() {
                 this.$el.remove()
                 this.$destroy()
