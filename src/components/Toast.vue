@@ -123,6 +123,8 @@
             top: 0;
             > .toast {
                 animation: 1s side-down;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
             }
         }
 
@@ -130,6 +132,8 @@
             bottom: 0;
             > .toast {
                 animation: 1s side-up;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
@@ -150,6 +154,7 @@
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 0 16px;
+            border-radius: 4px;
             > .content {
                 padding: 14px 0;
             }
