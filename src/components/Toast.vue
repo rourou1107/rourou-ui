@@ -1,6 +1,7 @@
 <template>
     <div class="toast">
-        <slot></slot>
+        <slot v-if="!enableAddHtml"></slot>
+        <div v-else v-html="$slots.default[0]"></div>
         <div class="line"></div>
         <span v-if="closeButton" class="close" @click="close">
             {{closeButton.text}}
@@ -28,6 +29,10 @@
                         callback: undefined
                     }
                 }
+            },
+            enableAddHtml: {
+                type: Boolean,
+                default: false
             }
         },
         created() {
