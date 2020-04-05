@@ -11,6 +11,11 @@ import Content from "./components/layout/Content"
 import Footer from "./components/layout/Footer"
 import Sider from "./components/layout/Sider"
 import plugin from "./plugin/plugin"
+import Tabs from "./components/tabs/Tabs"
+import TabsHead from "./components/tabs/TabsHead"
+import TabsItem from "./components/tabs/TabsItem"
+import TabsBody from "./components/tabs/TabsBody"
+import TabsPane from "./components/tabs/TabsPane"
 
 Vue.use(plugin)
 
