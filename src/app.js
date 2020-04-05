@@ -10,6 +10,9 @@ import Header from "./components/Header"
 import Content from "./components/Content"
 import Footer from "./components/Footer"
 import Sider from "./components/Sider"
+import plugin from "./plugin/plugin"
+
+Vue.use(plugin)
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -35,5 +38,10 @@ new Vue({
             message3: 'message3',
             message4: 'message4'
         };
+    },
+    methods: {
+        test() {
+            this.$toast('我是 toast')
+        }
     }
 });

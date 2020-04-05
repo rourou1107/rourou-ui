@@ -23,25 +23,10 @@
             font-size: var(--font-size);
         }
     </style>
-    <style>
-        .demo {
-            min-height: 100px;
-            border: 1px solid red;
-        }
-    </style>
 </head>
 <body>
 <div id="app">
-    <g-layout>
-        <g-sider class="demo">sider</g-sider>
-        <g-layout style="height: 100vh;">
-            <g-header class="demo">header</g-header>
-            <g-layout>
-                <g-content class="demo">content</g-content>
-            </g-layout>
-            <g-footer class="demo">footer</g-footer>
-        </g-layout>
-    </g-layout>
+    <button @click="test">点击</button>
 </div>
 </body>
 <script src="./src/app.js"></script>
