@@ -1,6 +1,10 @@
 <template>
     <div class="toast">
         <slot></slot>
+        <div class="line"></div>
+        <span v-if="closeButton" class="close" @click="close">
+            {{closeButton.text}}
+        </span>
     </div>
 </template>
 
@@ -15,14 +19,31 @@
             autoCloseDelay: {
                 type: Number,
                 default: 3
+            },
+            closeButton: {
+                type: Object,
+                default(){
+                    return {
+                        text: '关闭',
+                        callback: undefined
+                    }
+                }
             }
         },
         created() {
             if(this.autoClose){
                 window.setTimeout(()=>{
-                    this.$el.remove()
-                    this.$destroy()
+                    this.close()
                 }, this.autoCloseDelay * 1000)
+            }
+        },
+        methods: {
+            close() {
+                this.$el.remove()
+                this.$destroy()
+                if(this.closeButton && this.closeButton.callback) {
+                    this.closeButton.callback(this)
+                }
             }
         }
     }
@@ -45,5 +66,13 @@
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
         color: #fff;
         padding: 0 16px;
+        > .line {
+            height: 100%;
+            border: 1px solid #666;
+            margin-left: 16px;
+        }
+        > .close {
+            padding-left: 16px;
+        }
     }
 </style>

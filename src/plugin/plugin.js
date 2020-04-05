@@ -6,7 +6,9 @@ export default {
             const Constructor = Vue.extend(Toast)
             const toast = new Constructor({
                 propsData: {
-                    autoCloseDelay: toastOptions.autoCloseDelay
+                    autoCloseDelay: toastOptions.autoCloseDelay,
+                    autoClose: toastOptions.autoClose,
+                    closeButton: toastOptions.closeButton
                 }
             })
             toast.$slots.default = [message]

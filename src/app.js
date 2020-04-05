@@ -42,7 +42,14 @@ new Vue({
     methods: {
         test() {
             this.$toast('我是 toast',{
-                autoCloseDelay: 10
+                autoClose: false,
+                closeButton: {
+                    text: '知道了',
+                    callback(context) {
+                        console.log(context)
+                        console.log('用户说他知道了')
+                    }
+                }
             })
         }
     }
