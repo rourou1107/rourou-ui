@@ -41,13 +41,12 @@ new Vue({
     },
     methods: {
         test() {
-            this.$toast(`<a href="http://qq.com">QQ</a> 我是toast`,{
+            this.$toast(`我是toast我是toast`,{
                 autoClose: false,
                 closeButton: {
                     text: '知道了',
                     callback(context) {}
                 },
-                enableAddHtml: true
             })
         }
     }
