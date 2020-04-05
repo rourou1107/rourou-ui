@@ -40,14 +40,33 @@ new Vue({
         };
     },
     methods: {
-        test() {
-            this.$toast(`我是toast我是toast`,{
+        test1() {
+            this.$toast(`我是toast我是toast1`,{
+                autoClose: false,
+                closeButton: {
+                    text: '知道了',
+                    callback(context) {}
+                },
+            })
+        },
+        test2() {
+            this.$toast(`我是toast我是toast2`,{
                 autoClose: false,
                 closeButton: {
                     text: '知道了',
                     callback(context) {}
                 },
                 position: 'bottom'
+            })
+        },
+        test3() {
+            this.$toast(`我是toast我是toast3`,{
+                autoClose: false,
+                closeButton: {
+                    text: '知道了',
+                    callback(context) {}
+                },
+                position: 'middle'
             })
         }
     }
