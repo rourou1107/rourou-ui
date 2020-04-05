@@ -47,6 +47,7 @@ new Vue({
                     text: '知道了',
                     callback(context) {}
                 },
+                position: 'bottom'
             })
         }
     }

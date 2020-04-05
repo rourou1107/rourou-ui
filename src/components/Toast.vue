@@ -1,5 +1,5 @@
 <template>
-    <div class="toast" ref="toast">
+    <div class="toast" ref="toast" :class="positionClass">
         <div class="content" v-if="!enableAddHtml">
             <slot></slot>
         </div>
@@ -25,7 +25,7 @@
             },
             closeButton: {
                 type: Object,
-                default(){
+                default() {
                     return {
                         text: '关闭',
                         callback: undefined
@@ -35,6 +35,20 @@
             enableAddHtml: {
                 type: Boolean,
                 default: false
+            },
+            position: {
+                type: String,
+                default: 'top',
+                validator(value) {
+                    return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+                }
+            }
+        },
+        computed: {
+            positionClass() {
+                return {
+                    [`position-${this.position}`]: true
+                }
             }
         },
         mounted() {
@@ -42,14 +56,14 @@
             this.updateStyle()
         },
         methods: {
-            updateStyle(){
-                this.$nextTick(()=>{
+            updateStyle() {
+                this.$nextTick(() => {
                     this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`
                 })
             },
-            execAutoClose(){
-                if(this.autoClose){
-                    window.setTimeout(()=>{
+            execAutoClose() {
+                if (this.autoClose) {
+                    window.setTimeout(() => {
                         this.close()
                     }, this.autoCloseDelay * 1000)
                 }
@@ -57,7 +71,7 @@
             close() {
                 this.$el.remove()
                 this.$destroy()
-                if(this.closeButton && this.closeButton.callback) {
+                if (this.closeButton && this.closeButton.callback) {
                     this.closeButton.callback(this)
                 }
             }
@@ -73,7 +87,6 @@
         display: flex;
         align-items: center;
         position: fixed;
-        top: 0;
         left: 50%;
         transform: translateX(-50%);
         min-height: $toast-min-height;
@@ -82,13 +95,29 @@
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
         color: #fff;
         padding: 0 16px;
+
+        &.position-top {
+            top: 0;
+        }
+
+        &.position-bottom {
+            bottom: 0;
+        }
+
+        &.position-middle {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         > .content {
             padding: 14px 0;
         }
+
         > .line {
             border: 1px solid #666;
             margin-left: 16px;
         }
+
         > .close {
             flex-shrink: 0;
             padding-left: 16px;
