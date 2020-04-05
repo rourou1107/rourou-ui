@@ -6,7 +6,25 @@
 
 <script>
     export default {
-        name: 'GToast'
+        name: 'GToast',
+        props: {
+            autoClose: {
+                type: Boolean,
+                default: true
+            },
+            autoCloseDelay: {
+                type: Number,
+                default: 3
+            }
+        },
+        created() {
+            if(this.autoClose){
+                window.setTimeout(()=>{
+                    this.$el.remove()
+                    this.$destroy()
+                }, this.autoCloseDelay * 1000)
+            }
+        }
     }
 </script>
 

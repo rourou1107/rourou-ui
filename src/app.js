@@ -41,7 +41,9 @@ new Vue({
     },
     methods: {
         test() {
-            this.$toast('我是 toast')
+            this.$toast('我是 toast',{
+                autoCloseDelay: 10
+            })
         }
     }
 });
