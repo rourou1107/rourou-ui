@@ -4,19 +4,31 @@
         <div class="actions-wrapper">
             <slot name="actions"></slot>
         </div>
-        <div class="line" ref="line"></div>
+        <div class="line" ref="line" v-if="active"></div>
     </div>
 </template>
 
 <script>
     export default {
         name: 'GTabsHead',
+        data() {
+            return {
+                active: true
+            }
+        },
         inject: ['eventBus'],
         mounted() {
-            this.eventBus.$on('update:selected', (itemName, vm)=>{
-                const {width, left} = vm.$el.getBoundingClientRect()
-                this.$refs.line.style.width = `${width}px`
-                this.$refs.line.style.left = `${left}px`
+            this.eventBus.$on('update:selected', (itemName, vm) => {
+                if (vm.disabled) {
+                    this.active = false
+                    return
+                }
+                this.active = true
+                this.$nextTick(() => {
+                    const {width, left} = vm.$el.getBoundingClientRect()
+                    this.$refs.line.style.width = `${width}px`
+                    this.$refs.line.style.left = `${left}px`
+                })
             })
         }
     }
@@ -32,9 +44,11 @@
         position: relative;
         height: $height;
         border-bottom: 1px solid $border-color;
+
         > .actions-wrapper {
             margin-left: auto;
         }
+
         > .line {
             position: absolute;
             bottom: 0;

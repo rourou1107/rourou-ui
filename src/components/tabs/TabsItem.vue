@@ -26,7 +26,8 @@
         computed: {
             itemClasses() {
                 return {
-                    active: this.active
+                    active: this.active,
+                    disabled: this.disabled
                 }
             }
         },
@@ -37,6 +38,9 @@
         },
         methods: {
             changeItem(){
+                if(this.disabled) {
+                    return
+                }
                 this.eventBus.$emit('update:selected', this.name, this)
             }
         }
@@ -45,6 +49,7 @@
 
 <style lang="scss" scoped>
     $blue: blue;
+    $grey: #ccc;
 .tabs-item {
     display: flex;
     align-items: center;
@@ -54,6 +59,10 @@
     &.active{
         color: $blue;
         font-weight: 600;
+    }
+    &.disabled {
+        cursor: not-allowed;
+        color: $grey;
     }
 }
 </style>
