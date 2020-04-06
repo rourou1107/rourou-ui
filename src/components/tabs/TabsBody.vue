@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
-.tabs-body{
-
-}
+    .tabs-body{
+        padding: 1em;
+    }
 </style>
