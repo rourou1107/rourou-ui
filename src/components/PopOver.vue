@@ -1,9 +1,11 @@
 <template>
     <div class="popover" @click="changePopOver">
-        <div class="content-wrapper" v-if="visible">
+        <div class="content-wrapper" v-if="visible" ref="contentWrapper">
             <slot name="content"></slot>
         </div>
-        <slot></slot>
+        <span ref="buttonWrapper">
+            <slot></slot>
+        </span>
     </div>
 </template>
 
@@ -17,12 +19,20 @@
         },
         methods: {
             changePopOver() {
-                let x = ()=>{
+                let x = () => {
                     this.visible = false
-                    document.removeEventListener('click',x)
+                    document.removeEventListener('click', x)
                 }
                 this.visible = !this.visible
                 if (this.visible === true) {
+                    this.$nextTick(() => {
+                        let contentWrapper = this.$refs.contentWrapper
+                        document.body.appendChild(contentWrapper)
+                        let {left, top} = this.$refs.buttonWrapper.getBoundingClientRect()
+                        contentWrapper.style.top = top + window.scrollY + 'px'
+                        contentWrapper.style.left = left + window.scrollX + 'px'
+                    })
+
                     window.setTimeout(() => {
                         document.addEventListener('click', x)
                     })
@@ -36,11 +46,12 @@
     .popover {
         display: inline-block;
         position: relative;
-        .content-wrapper {
-            position: absolute;
-            left: 0;
-            bottom: 100%;
-            border: 1px solid black;
-        }
+    }
+
+    .content-wrapper {
+        height: 50px;
+        position: absolute;
+        border: 1px solid black;
+        transform: translateY(-100%);
     }
 </style>
