@@ -30,25 +30,33 @@
     };
 </script>
 <style lang="scss">
+    $font-size: 14px;
+    $button-height: 32px;
+    $button-bg: white;
+    $button-active-bg: #eee;
+    $border-radius: 4px;
+    $color: #333;
+    $border-color: #999;
+    $border-color-hover: #666;
     @keyframes spin {
         0%{transform: rotate(0deg);}
         100%{transform: rotate(360deg);}
     }
     .g-button {
-        height: var(--button-height);
+        height: $button-height;
         padding: 0 1em;
-        background-color: var(--button-bg);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        color: var(--color);
+        background-color: $button-bg;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        color: $color;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        font-size: var(--font-size);
-        &:active {background-color: var(--button-active-bg);}
+        font-size: $font-size;
+        &:active {background-color: $button-active-bg;}
 
-        &:hover {border: 1px solid var(--border-color-hover);}
+        &:hover {border: 1px solid $border-color-hover;}
 
         &:focus {outline: none;}
 

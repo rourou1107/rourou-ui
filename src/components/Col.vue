@@ -81,7 +81,6 @@
 <style lang="scss" scoped>
     .col {
         height: 50px;
-        border: 1px solid red;
         $class-prefix: col-;
         @for $n from 1 through 24 {
             &.#{$class-prefix}#{$n} { /*类似于 js 中的 ${n}*/

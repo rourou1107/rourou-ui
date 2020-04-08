@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-head">
+    <div class="tabs-head" ref="tabsHead">
         <slot></slot>
         <div class="actions-wrapper">
             <slot name="actions"></slot>
@@ -26,8 +26,9 @@
                 this.active = true
                 this.$nextTick(() => {
                     const {width, left} = vm.$el.getBoundingClientRect()
+                    const left2 = this.$refs.tabsHead.getBoundingClientRect().left
                     this.$refs.line.style.width = `${width}px`
-                    this.$refs.line.style.left = `${left}px`
+                    this.$refs.line.style.left = `${left - left2}px`
                 })
             })
         }
