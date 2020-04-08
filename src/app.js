@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import Button from './components/Button';
-import Icon from "./components/Icon";
-import GroupButton from "./components/GroupButton";
+import Vue from 'vue'
+import Button from './components/Button'
+import Icon from "./components/Icon"
+import GroupButton from "./components/GroupButton"
 import Input from "./components/Input"
-import Row from "./components/Row";
-import Col from "./components/Col";
+import Row from "./components/Row"
+import Col from "./components/Col"
 import Layout from "./components/layout/Layout"
 import Header from "./components/layout/Header"
 import Content from "./components/layout/Content"
@@ -16,12 +16,13 @@ import TabsHead from "./components/tabs/TabsHead"
 import TabsItem from "./components/tabs/TabsItem"
 import TabsBody from "./components/tabs/TabsBody"
 import TabsPane from "./components/tabs/TabsPane"
+import PopOver from "./components/PopOver"
 
 Vue.use(plugin)
 
-Vue.component('g-button', Button);
-Vue.component('g-icon', Icon);
-Vue.component('g-group-button', GroupButton);
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
+Vue.component('g-group-button', GroupButton)
 Vue.component('g-input', Input)
 Vue.component('g-row', Row)
 Vue.component('g-col', Col)
@@ -35,6 +36,7 @@ Vue.component('g-tabs-head', TabsHead)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-pane', TabsPane)
+Vue.component('g-popover', PopOver)
 
 new Vue({
     el: '#app',
@@ -43,4 +45,4 @@ new Vue({
             selectedTab: 'woman'
         }
     }
-});
+})
