@@ -50,10 +50,10 @@
                     contentWrapper.style.top = top + window.scrollY + height + 'px'
                     contentWrapper.style.left = left + window.scrollX + 'px'
                 } else if (this.position === 'left') {
-                    contentWrapper.style.top = top + window.scrollY + 'px'
+                    contentWrapper.style.top = top + window.scrollY - contentWrapper.getBoundingClientRect().height / 2 + height / 2 + 'px'
                     contentWrapper.style.left = left + window.scrollX - contentWrapper.getBoundingClientRect().width + 'px'
                 } else if (this.position === 'right') {
-                    contentWrapper.style.top = top + window.scrollY + 'px'
+                    contentWrapper.style.top = top + window.scrollY + - contentWrapper.getBoundingClientRect().height / 2 + height / 2 +'px'
                     contentWrapper.style.left = left + window.scrollX + width + 'px'
                 }
 
@@ -119,9 +119,11 @@
         &.position-top {
             transform: translateY(-100%);
             margin-top: -10px;
+
             &::before, &::after {
                 left: 10%;
             }
+
             &::before {
                 top: 100%;
                 border-top-color: $border-color;
@@ -135,9 +137,11 @@
 
         &.position-bottom {
             margin-top: 10px;
+
             &::before, &::after {
                 left: 10%;
             }
+
             &::before {
                 bottom: 100%;
                 border-bottom-color: $border-color;
@@ -166,6 +170,7 @@
                 border-left-color: #ffffff;
             }
         }
+
         &.position-right {
             margin-left: 10px;
 
