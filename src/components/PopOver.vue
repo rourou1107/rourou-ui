@@ -32,6 +32,10 @@
                 if (this.$refs.popover && this.$refs.popover.contains(e.target)) {
                     return
                 }
+                // popover 移到 body 下
+                if (this.$refs.contentWrapper && this.$refs.contentWrapper.contains(e.target)) {
+                    return
+                }
                 this.close()
 
             },
