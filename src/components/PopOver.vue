@@ -3,7 +3,7 @@
         <div class="content-wrapper" v-if="visible" ref="contentWrapper">
             <slot name="content"></slot>
         </div>
-        <span ref="buttonWrapper">
+        <span ref="buttonWrapper" class="button-wrapper">
             <slot></slot>
         </span>
     </div>
@@ -42,7 +42,7 @@
                     document.addEventListener('click', this.onClickDocument)
                 })
             },
-            close(){ // 收尾的工作放在一个地方，不要分散
+            close() { // 收尾的工作放在一个地方，不要分散
                 this.visible = false
                 document.removeEventListener('click', this.onClickDocument)
             },
@@ -60,15 +60,48 @@
 </script>
 
 <style lang="scss" scoped>
+    $border-color: #999;
+    $border-radius: 4px;
     .popover {
         display: inline-block;
         position: relative;
+
+        .button-wrapper {
+            display: inline-block;
+        }
     }
 
     .content-wrapper {
-        height: 50px;
         position: absolute;
-        border: 1px solid black;
+        max-width: 20em;
+        border: 1px solid $border-color;
         transform: translateY(-100%);
+        margin-top: -10px;
+        padding: .5em 1em;
+        border-radius: $border-radius;
+        word-break: break-all;
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.1);
+        /*filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));*/
+        background-color: #ffffff;
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 10%;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: $border-color;
+        }
+
+        &::before {
+            top: 100%;
+        }
+
+        &::after {
+            top: calc(100% - 1px);
+            border-top-color: #ffffff;
+        }
     }
 </style>
