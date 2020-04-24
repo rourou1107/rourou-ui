@@ -40,22 +40,30 @@
 
             },
             positionPopOver() {
-                let contentWrapper = this.$refs.contentWrapper
+                const contentWrapper = this.$refs.contentWrapper
                 document.body.appendChild(contentWrapper)
                 let {left, top, width, height} = this.$refs.buttonWrapper.getBoundingClientRect()
-                if (this.position === 'top') {
-                    contentWrapper.style.top = top + window.scrollY + 'px'
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                } else if (this.position === 'bottom') {
-                    contentWrapper.style.top = top + window.scrollY + height + 'px'
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                } else if (this.position === 'left') {
-                    contentWrapper.style.top = top + window.scrollY - contentWrapper.getBoundingClientRect().height / 2 + height / 2 + 'px'
-                    contentWrapper.style.left = left + window.scrollX - contentWrapper.getBoundingClientRect().width + 'px'
-                } else if (this.position === 'right') {
-                    contentWrapper.style.top = top + window.scrollY + - contentWrapper.getBoundingClientRect().height / 2 + height / 2 +'px'
-                    contentWrapper.style.left = left + window.scrollX + width + 'px'
+                const positions = {
+                    top: {
+                        top: top + window.scrollY,
+                        left: left + window.scrollX
+                    },
+                    bottom: {
+                        top: top + window.scrollY + height,
+                        left: left + window.scrollX
+                    },
+                    left: {
+                        top: top + window.scrollY - (contentWrapper.getBoundingClientRect().height - height) / 2,
+                        left: left + window.scrollX - contentWrapper.getBoundingClientRect().width
+                    }
+                    ,
+                    right: {
+                        top: top + window.scrollY - (contentWrapper.getBoundingClientRect().height - height) / 2,
+                        left: left + window.scrollX + width
+                    }
                 }
+                contentWrapper.style.top = positions[this.position].top + 'px'
+                contentWrapper.style.left = positions[this.position].left+ 'px'
 
             },
             open() {
